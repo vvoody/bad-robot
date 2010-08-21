@@ -1,0 +1,4 @@
+cron:
+- description: check feed update
+  url: /opera/snapshot/check
+  schedule: every 15 minutes

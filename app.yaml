@@ -1,5 +1,5 @@
 application: bad-robot
-version: 1
+version: x
 runtime: python
 api_version: 1
 
@@ -13,5 +13,13 @@ handlers:
   static_files: static/favicon.ico
   upload: static/favicon.ico
   mime_type: image/x-icon
+- url: /opera/snapshot/check
+  script: do_opera.py
+  login: admin
+- url: /opera/snapshot/cleanup
+  script: do_opera.py
+  login: admin
+- url: /opera/.*
+  script: do_opera.py
 - url: .*
   script: main.py
