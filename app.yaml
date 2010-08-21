@@ -24,6 +24,9 @@ handlers:
   login: admin
 - url: /opera/.*
   script: do_opera.py
+- url: /admin/.*
+  script: $PYTHON_LIB/google/appengine/ext/admin
+  login: admin
 - url: .*
   script: main.py
 
